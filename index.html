@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -23,7 +23,8 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#case-studies">Case Studies</a></li>
                 <li><a href="#experience">Experience</a></li>
-                <li><a href="#skills-awards">Skills & Awards</a></li>
+                <li><a href="#skills-awards">Skills</a></li>
+                <li><a href="#dissertation">Dissertation</a></li>
             </ul>
         </div>
     </nav>
@@ -41,6 +42,24 @@
                 <div class="hero-actions">
                     <a href="#case-studies" class="btn btn-primary">View Case Studies</a>
                     <a href="#about" class="btn btn-secondary">Academic Background</a>
+                </div>
+                <div class="hero-socials">
+                    <a href="https://www.linkedin.com/in/kadiryavuzemiroglu/" target="_blank" rel="noopener"
+                        aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                    </a>
+                    <a href="https://medium.com/@kadir.yavuz.emiroglu" target="_blank" rel="noopener"
+                        aria-label="Medium">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.41-3.38 6.41s-3.38-2.87-3.38-6.41 1.51-6.41 3.38-6.41 3.38 2.87 3.38 6.41zM24 12c0 3.17-.53 5.75-1.19 5.75s-1.19-2.58-1.19-5.75.53-5.75 1.19-5.75S24 8.83 24 12z" />
+                        </svg>
+                    </a>
                 </div>
             </div>
             <div class="hero-image-container">
@@ -74,6 +93,12 @@
                                 <span>MA, Political Science (July 2019) | BA, Political Science (July 2019)</span>
                             </li>
                         </ul>
+                        <div class="education-actions">
+                            <a href="#dissertation" class="btn btn-secondary">View Dissertation Defense Deck</a>
+                        </div>
+                    </div>
+                    <div class="split-image">
+                        <img src="images/academic drawings.png" alt="Academic Drawings" class="academic-drawing-img">
                     </div>
                 </div>
             </div>
@@ -163,7 +188,11 @@
                         <h2 class="section-title">Professional Experience</h2>
                     </div>
                     <div class="split-content timeline">
-                        <div class="timeline-item">
+                        <div class="timeline-item reveal">
+                            <div class="timeline-company-logo freelance-logo-group">
+                                <span class="timeline-logo-text">KYE.</span>
+                                <span class="logo-fallback">Freelance</span>
+                            </div>
                             <h3 class="timeline-title">UX Research Consultant</h3>
                             <span class="timeline-company">Freelance | June 2025 - Ongoing</span>
                             <p>Conducted end-to-end research for SaaS and tech startups (e.g., Lysto) and game studios
@@ -171,7 +200,9 @@
                                 strategy. Executed fast-paced research projects, delivered vital insights and
                                 roadmapping.</p>
                         </div>
-                        <div class="timeline-item">
+                        <div class="timeline-item reveal">
+                            <img src="logos/solsten.svg" alt="Solsten" class="timeline-company-logo"
+                                onerror="this.outerHTML='<span class=\'timeline-company-logo logo-fallback\'>Solsten</span>'">
                             <h3 class="timeline-title">UX Researcher & Games User Researcher</h3>
                             <span class="timeline-company">Solsten, Inc. | Feb 2022 - May 2025</span>
                             <p>Led end-to-end contextual inquiry, usability testing, and surveys for an AI-focused B2B
@@ -183,7 +214,9 @@
                                 maintained a centralized research repository, reducing feedback data entry time by 55%.
                             </p>
                         </div>
-                        <div class="timeline-item">
+                        <div class="timeline-item reveal">
+                            <img src="logos/umn.svg" alt="UMN" class="timeline-company-logo"
+                                onerror="this.outerHTML='<span class=\'timeline-company-logo logo-fallback\'>UMN</span>'">
                             <h3 class="timeline-title">Graduate Researcher and Teaching Assistant</h3>
                             <span class="timeline-company">University of Minnesota, Twin Cities | Jan 2020 - May
                                 2022</span>
@@ -191,7 +224,9 @@
                                 Served as a Teaching Assistant for high-demand courses such as "Understanding Cultures"
                                 and "Cultural Anthropology".</p>
                         </div>
-                        <div class="timeline-item">
+                        <div class="timeline-item reveal">
+                            <img src="logos/bilkent.svg" alt="Bilkent" class="timeline-company-logo"
+                                onerror="this.outerHTML='<span class=\'timeline-company-logo logo-fallback\'>Bilkent</span>'">
                             <h3 class="timeline-title">Graduate Researcher and Teaching Assistant</h3>
                             <span class="timeline-company">Bilkent University | Jan 2018 - July 2019</span>
                             <p>Taught political science courses for large classes; Conducted interviews and
@@ -252,6 +287,27 @@
             </div>
         </section>
 
+
+        <!-- Dissertation Section -->
+        <section id="dissertation" class="section dissertation-section bg-light reveal">
+            <div class="container text-center">
+                <h2 class="section-title">Dissertation Defense Deck</h2>
+                <h3 class="section-subtitle">Regime of Ruination: An Urban Ethnography of Turkish Authoritarianism</h3>
+
+                <div class="carousel-container">
+                    <div class="carousel-track" id="carouselTrack">
+                        <!-- We will inject slides here by JS -->
+                    </div>
+                    <button class="carousel-btn prev-btn" id="prevBtn" aria-label="Previous slide">&#10094;</button>
+                    <button class="carousel-btn next-btn" id="nextBtn" aria-label="Next slide">&#10095;</button>
+
+                    <div class="carousel-indicators" id="carouselIndicators">
+                        <!-- Indicators will be injected by JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="personal" class="section personal-section bg-dark">
             <div class="container text-center">
                 <h2 class="section-title">Outside of Work</h2>
@@ -275,12 +331,119 @@
             <div class="footer-info">
                 <h2>Kadir Yavuz Emiroglu</h2>
                 <p>UX Researcher | Anthropologist</p>
+                <div class="footer-socials">
+                    <a href="https://www.linkedin.com/in/kadiryavuzemiroglu/" target="_blank" rel="noopener"
+                        aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                    </a>
+                    <a href="https://medium.com/@kadir.yavuz.emiroglu" target="_blank" rel="noopener"
+                        aria-label="Medium">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.41-3.38 6.41s-3.38-2.87-3.38-6.41 1.51-6.41 3.38-6.41 3.38 2.87 3.38 6.41zM24 12c0 3.17-.53 5.75-1.19 5.75s-1.19-2.58-1.19-5.75.53-5.75 1.19-5.75S24 8.83 24 12z" />
+                        </svg>
+                    </a>
+                </div>
             </div>
             <div class="footer-copy">
                 <p>&copy; 2026 Kadir Yavuz Emiroglu. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
+    <!-- Scripts -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const track = document.getElementById('carouselTrack');
+            const indicatorsContainer = document.getElementById('carouselIndicators');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const totalSlides = 27;
+            let currentSlide = 0;
+
+            // Load slides
+            for (let i = 1; i <= totalSlides; i++) {
+                const slideNum = i.toString().padStart(3, '0');
+
+                // create slide
+                const slide = document.createElement('div');
+                slide.classList.add('carousel-slide');
+                const img = document.createElement('img');
+                img.src = `web_images/slides/slide_${slideNum}.png`;
+                img.alt = `Dissertation Slide ${i}`;
+                img.loading = "lazy";
+                slide.appendChild(img);
+                track.appendChild(slide);
+
+                // create indicator
+                const dot = document.createElement('button');
+                dot.classList.add('carousel-dot');
+                if (i === 1) dot.classList.add('active');
+                dot.setAttribute('aria-label', `Go to slide ${i}`);
+                dot.addEventListener('click', () => goToSlide(i - 1));
+                indicatorsContainer.appendChild(dot);
+            }
+
+            const slides = document.querySelectorAll('.carousel-slide');
+            const dots = document.querySelectorAll('.carousel-dot');
+
+            function updateCarousel() {
+                const containerWidth = document.querySelector('.carousel-container').offsetWidth;
+                track.style.transform = `translateX(-${currentSlide * containerWidth}px)`;
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentSlide);
+                });
+            }
+
+            function goToSlide(index) {
+                currentSlide = index;
+                updateCarousel();
+            }
+
+            nextBtn.addEventListener('click', () => {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                updateCarousel();
+            });
+
+            prevBtn.addEventListener('click', () => {
+                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                updateCarousel();
+            });
+
+            // Keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                const sect = document.getElementById('dissertation');
+                const rect = sect.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    if (e.key === 'ArrowRight') nextBtn.click();
+                    if (e.key === 'ArrowLeft') prevBtn.click();
+                }
+            });
+
+            // Handle window resize for pixel-based carousel
+            window.addEventListener('resize', updateCarousel);
+
+            updateCarousel();
+
+            // Scroll Reveal Logic
+            const revealElements = document.querySelectorAll('.reveal');
+
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            revealElements.forEach(el => revealObserver.observe(el));
+        });
+    </script>
 </body>
 
 </html>

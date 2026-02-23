@@ -109,10 +109,43 @@ a:hover {
 
 .logo {
     font-family: var(--font-serif);
-    font-weight: 600;
-    font-size: 1.5rem;
+    font-weight: 700;
+    font-size: 2.5rem;
     color: var(--text-color);
     letter-spacing: -0.5px;
+}
+
+/* Hero Socials */
+.hero-socials {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.hero-socials a {
+    color: var(--text-muted);
+    transition: var(--transition);
+}
+
+.hero-socials a:hover {
+    color: var(--accent-color);
+    transform: translateY(-3px);
+}
+
+/* Footer Socials */
+.footer-socials {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.footer-socials a {
+    color: var(--text-muted);
+    transition: var(--transition);
+}
+
+.footer-socials a:hover {
+    color: var(--accent-color);
 }
 
 .logo:hover {
@@ -260,6 +293,23 @@ a:hover {
     margin-bottom: 2rem;
 }
 
+.split-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.academic-drawing-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.education-actions {
+    margin-top: 2rem;
+}
+
 /* Education List */
 .education-list {
     list-style: none;
@@ -397,7 +447,8 @@ a:hover {
 .timeline-item::before {
     content: "";
     position: absolute;
-    left: -2.35rem;
+    left: -2.68rem;
+    /* Adjusted for precise alignment on the 1px line */
     top: 5px;
     width: 12px;
     height: 12px;
@@ -602,4 +653,183 @@ a:hover {
 
 .hero-actions {
     animation-delay: 0.4s;
+}
+
+/* Dissertation Carousel */
+.carousel-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 3rem auto 0;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    background: #fdfdfd;
+    border: 1px solid var(--border-color);
+}
+
+.carousel-track {
+    display: flex;
+    width: max-content;
+    /* Ensure track fits all slides precisely */
+    transition: transform 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.carousel-slide {
+    width: 1000px;
+    /* Match container max-width exactly to prevent drift */
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    height: 600px;
+}
+
+.carousel-slide img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    object-fit: contain;
+    /* Prevent zoom */
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(4px);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    color: var(--text-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-btn:hover {
+    background: white;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.prev-btn {
+    left: 1rem;
+}
+
+.next-btn {
+    right: 1rem;
+}
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.carousel-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--border-color);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.carousel-dot.active {
+    background: var(--accent-color);
+    transform: scale(1.4);
+}
+
+/* Scroll Reveal Interactions */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Experience Logo Emergence */
+.timeline-item {
+    transition: var(--transition);
+    border-left: 2px solid transparent;
+    padding-left: 2rem;
+    position: relative;
+    opacity: 0.3;
+    transform: translateX(-20px);
+}
+
+.timeline-item.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.timeline-company-logo {
+    display: block;
+    margin-bottom: 0.8rem;
+    height: 38px;
+    /* Slightly larger for better visibility */
+    width: auto;
+    object-fit: contain;
+    transform: scale(0) translateY(10px);
+    opacity: 0;
+    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s, opacity 0.4s ease 0.2s;
+}
+
+.timeline-item.active .timeline-company-logo {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
+
+/* Fallback/Text-only logo style */
+.logo-fallback {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    background: var(--accent-color);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 700;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Adjust timeline dots for revelation */
+.timeline-item::before {
+    transform: scale(0);
+    transition: transform 0.4s ease 0.2s;
+}
+
+.timeline-item.active::before {
+    transform: scale(1);
+}
+
+/* Freelance Logo Grouping */
+.freelance-logo-group {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+
+.timeline-logo-text {
+    font-family: var(--font-serif);
+    font-weight: 700;
+    /* Bolded to match header logo */
+    font-size: 1.4rem;
+    color: var(--text-color);
+    letter-spacing: -0.5px;
 }
