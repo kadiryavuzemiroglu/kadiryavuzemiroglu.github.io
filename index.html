@@ -34,6 +34,24 @@
             <div class="hero-content">
                 <h1 class="hero-title">Kadir Yavuz Emiroglu, PhD</h1>
                 <p class="hero-subtitle">Anthropologist & UX Researcher</p>
+                <div class="hero-socials">
+                    <a href="https://www.linkedin.com/in/kadiryavuzemiroglu/" target="_blank" rel="noopener"
+                        aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                    </a>
+                    <a href="https://medium.com/@kadir.yavuz.emiroglu" target="_blank" rel="noopener"
+                        aria-label="Medium">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.41-3.38 6.41s-3.38-2.87-3.38-6.41 1.51-6.41 3.38-6.41 3.38 2.87 3.38 6.41zM24 12c0 3.17-.53 5.75-1.19 5.75s-1.19-2.58-1.19-5.75.53-5.75 1.19-5.75S24 8.83 24 12z" />
+                        </svg>
+                    </a>
+                </div>
                 <p class="hero-description">
                     A UX researcher with a background in anthropology, I specialize in transforming qualitative and
                     quantitative insights into actionable product strategies. My work bridges cultural analysis and user
@@ -189,7 +207,7 @@
                     </div>
                     <div class="split-content timeline">
                         <div class="timeline-item reveal">
-                            <div class="timeline-company-logo freelance-logo-group">
+                            <div class="freelance-brand-container">
                                 <span class="timeline-logo-text">KYE.</span>
                                 <span class="logo-fallback">Freelance</span>
                             </div>
@@ -393,8 +411,7 @@
             const dots = document.querySelectorAll('.carousel-dot');
 
             function updateCarousel() {
-                const containerWidth = document.querySelector('.carousel-container').offsetWidth;
-                track.style.transform = `translateX(-${currentSlide * containerWidth}px)`;
+                track.style.transform = `translateX(-${currentSlide * 100}%)`;
                 dots.forEach((dot, index) => {
                     dot.classList.toggle('active', index === currentSlide);
                 });

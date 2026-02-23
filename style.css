@@ -119,7 +119,8 @@ a:hover {
 .hero-socials {
     display: flex;
     gap: 1.5rem;
-    margin-top: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .hero-socials a {
@@ -658,6 +659,7 @@ a:hover {
 /* Dissertation Carousel */
 .carousel-container {
     position: relative;
+    width: 100%;
     max-width: 1000px;
     margin: 3rem auto 0;
     overflow: hidden;
@@ -668,29 +670,34 @@ a:hover {
 }
 
 .carousel-track {
-    display: flex;
-    width: max-content;
-    /* Ensure track fits all slides precisely */
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+    width: 100%;
+    /* Grid is more robust than flex for exact percentage children sizing */
     transition: transform 0.6s cubic-bezier(0.65, 0, 0.35, 1);
 }
 
 .carousel-slide {
-    width: 1000px;
-    /* Match container max-width exactly to prevent drift */
-    flex-shrink: 0;
+    width: 100%;
+    /* Ensure slide takes full width of the grid column */
     display: flex;
     justify-content: center;
     align-items: center;
     background: #fff;
-    height: 600px;
+    height: auto;
+    min-height: 400px;
+    max-height: 70vh;
+    overflow: hidden;
 }
 
 .carousel-slide img {
     max-width: 100%;
     max-height: 100%;
+    width: auto;
+    height: auto;
     display: block;
     object-fit: contain;
-    /* Prevent zoom */
 }
 
 .carousel-btn {
@@ -780,8 +787,8 @@ a:hover {
 .timeline-company-logo {
     display: block;
     margin-bottom: 0.8rem;
-    height: 38px;
-    /* Slightly larger for better visibility */
+    height: 30px;
+    /* Subtler height for professional look */
     width: auto;
     object-fit: contain;
     transform: scale(0) translateY(10px);
@@ -794,17 +801,33 @@ a:hover {
     opacity: 1;
 }
 
+.timeline-item.active .timeline-logo-text {
+    font-family: var(--font-serif);
+    font-weight: 800;
+    font-size: 1.6rem;
+    color: var(--accent-color);
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, var(--accent-color), #8a4a3a);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    line-height: 1;
+}
+
 /* Fallback/Text-only logo style */
 .logo-fallback {
     display: inline-block;
-    padding: 0.2rem 0.6rem;
-    background: var(--accent-color);
+    padding: 0.3rem 0.7rem;
+    background: linear-gradient(135deg, var(--accent-color), #8a4a3a);
     color: white;
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     font-weight: 700;
     border-radius: 4px;
     text-transform: uppercase;
     letter-spacing: 1px;
+    box-shadow: 0 4px 10px rgba(201, 107, 82, 0.2);
 }
 
 /* Adjust timeline dots for revelation */
@@ -817,19 +840,28 @@ a:hover {
     transform: scale(1);
 }
 
-/* Freelance Logo Grouping */
-.freelance-logo-group {
+/* Freelance Branding */
+.freelance-brand-container {
     display: flex;
     align-items: center;
     gap: 0.8rem;
     margin-bottom: 0.8rem;
+    height: 30px;
+    /* Force 30px height on logos */
 }
 
 .timeline-logo-text {
     font-family: var(--font-serif);
-    font-weight: 700;
-    /* Bolded to match header logo */
-    font-size: 1.4rem;
-    color: var(--text-color);
-    letter-spacing: -0.5px;
+    font-weight: 800;
+    /* Extra bold for brand identity */
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    /* Adding brand color */
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, var(--accent-color), #8a4a3a);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
 }
